@@ -1134,11 +1134,6 @@ function switchTab(type) {
     }
 }
 
-function handleAuth(event) {
-    event.preventDefault();
-    alert('Система в процессе настройки / Ulgam sazlanýar');
-    closeAuthModal();
-}
 
 window.onclick = function(event) {
     const modal = document.getElementById('authModal');
