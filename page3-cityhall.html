@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Прописка, Мэрия и Жилье — Japan Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-mark" style="background-color: #bc002d !important;">日本</span>
+                <span class="logo-text">Japan Guide</span>
+            </a>
+
+            <!-- Right Controls: Lang + Auth -->
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru" onclick="setLanguage('ru')">RU</button>
+                    <button class="lang-btn" data-lang="tk" onclick="setLanguage('tk')">TK</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+                </div>
+                <button class="auth-btn" onclick="openAuthModal()" data-ru="Вход" data-tk="Giriş">Вход</button>
+            </div>
+
+            <a href="guide-list.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i> <span data-ru="К списку" data-tk="Bölümlere">К списку</span>
+            </a>
+        </div>
+    </header>
+
+
+    <!-- Основной контент -->
+    <main class="container page-content" style="max-width: 860px; padding: 40px 20px;">
+
+        <!-- Заголовок страницы -->
+        <div class="page-title-block" style="margin-bottom: 32px; border-bottom: 1px solid #e5e7eb; padding-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                <span class="step-badge" style="background: #f3f4f6; color: #bc002d; font-weight: 700; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;">
+                    03 / STEP THREE
+                </span>
+            </div>
+            </h1>
+            <p style="color: #4b5563; font-size: 1rem; margin-top: 10px; line-height: 1.6;">
+                Инструкция по регистрации адреса проживания в течение 14 дней, оформлению медицинской страховки (NHI), пенсий и выбору оптимального жилья в Японии.
+            </p>
+        </div>
+
+        <section style="display: flex; flex-direction: column; gap: 28px;">
+
+            <!-- Главный шаг: Визит в Мэрию (City Hall / Ward Office) -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 0.75rem; font-weight: 800; color: #d97706; background: #fef3c7; padding: 4px 12px; border-radius: 6px; border: 1px solid #fde68a;">
+                        <i class="fa-solid fa-clock" style="margin-right: 6px;"></i> СРОК: 14 ДНЕЙ
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #d97706; font-size: 1.1rem;">住民登録</span>
+                </div>
+
+                <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">
+                    <i class="fa-solid fa-building-columns" style="color: #bc002d; margin-right: 8px;"></i> Регистрация адреса в муниципалитете
+                </h2>
+                <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin-bottom: 16px;">
+                    В течение 14 дней после заселения вы обязаны посетить районную мэрию (City Hall) по месту вашего фактического проживания.
+                </p>
+
+                <!-- Необходимые документы -->
+                <div style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 18px; border-radius: 10px; margin-bottom: 16px;">
+                    <span style="font-size: 0.9rem; font-weight: 700; color: #111827; display: block; margin-bottom: 10px;">
+                        <i class="fa-solid fa-folder-open" style="color: #bc002d; margin-right: 6px;"></i> Что взять с собой в мэрию:
+                    </span>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; font-size: 0.88rem; color: #374151;">
+                        <div style="background: #ffffff; padding: 10px; border-radius: 6px; border: 1px solid #f3f4f6;">
+                            <strong>1. Паспорт</strong> (с действующей визой)
+                        </div>
+                        <div style="background: #ffffff; padding: 10px; border-radius: 6px; border: 1px solid #f3f4f6;">
+                            <strong>2. Zairyu Card</strong> (карта резидента)
+                        </div>
+                        <div style="background: #ffffff; padding: 10px; border-radius: 6px; border: 1px solid #f3f4f6;">
+                            <strong>3. Студенческий билет</strong> (если вы студент)
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 14px 18px; border-radius: 8px; font-size: 0.88rem; color: #166534; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-circle-check" style="font-size: 1.2rem; color: #166534;"></i>
+                    <span><strong>Результат:</strong> На обратную сторону вашей Zairyu Card сотрудником мэрии будет напечатан официальный адрес проживания.</span>
+                </div>
+            </div>
+
+            <!-- Национальное медицинское страхование (NHI) -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 0.75rem; font-weight: 800; color: #0284c7; background: #e0f2fe; padding: 4px 12px; border-radius: 6px; border: 1px solid #bae6fd;">
+                        <i class="fa-solid fa-notes-medical" style="margin-right: 6px;"></i> MANDATORY INSURANCE
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #0284c7; font-size: 1.1rem;">国民健康保険</span>
+                </div>
+
+                <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">
+                    <i class="fa-solid fa-heart-pulse" style="color: #bc002d; margin-right: 8px;"></i> Медицинская страхование
+                </h2>
+                <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin-bottom: 16px;">
+                    Оформляется в том же окне мэрии сразу после прописки. Страховка обязательна для всех иностранцев, проживающих в Японии более 3 месяцев.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 16px;">
+                    <div style="border: 1px solid #e5e7eb; padding: 16px; border-radius: 8px; background: #f9fafb;">
+                        <span style="font-weight: 700; color: #111827; font-size: 0.9rem; display: block; margin-bottom: 6px;">
+                            <i class="fa-solid fa-percent" style="color: #0284c7;"></i> Покрытие расходы 70%
+                        </span>
+                        <span style="font-size: 0.85rem; color: #6b7280; line-height: 1.5; display: block;">
+                            Страховка покрывает 70% стоимости приема врачей, анализов, операций и рецептурных лекарств. Вы платите только 30%.
+                        </span>
+                    </div>
+
+                    <div style="border: 1px solid #e5e7eb; padding: 16px; border-radius: 8px; background: #f9fafb;">
+                        <span style="font-weight: 700; color: #111827; font-size: 0.9rem; display: block; margin-bottom: 6px;">
+                            <i class="fa-solid fa-piggy-bank" style="color: #0284c7;"></i> Студенческая скидка
+                        </span>
+                        <span style="font-size: 0.85rem; color: #6b7280; line-height: 1.5; display: block;">
+                            Поскольку у студентов нет дохода в Японии за предыдущий год, взнос составит минимум: примерно ¥1,500 – ¥2,000 в месяц.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Освобождение от пенсии -->
+                <div style="background: #fffbeeb0; border: 1px solid #fef3c7; padding: 14px 18px; border-radius: 8px; font-size: 0.88rem; color: #b45309;">
+                    <i class="fa-solid fa-triangle-exclamation" style="margin-right: 6px;"></i>
+                    <strong>Национальная пенсия:</strong> В Японии все лица от 20 лет обязаны платить пенсионные взносы. Однако студенты имеют право на 100% освобождение. Обязательно подайте заявление на освобождение прямо в мэрии!
+                </div>
+            </div>
+
+            <!-- Варианты проживания в Японии -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 0.75rem; font-weight: 800; color: #7c3aed; background: #f3e8ff; padding: 4px 12px; border-radius: 6px; border: 1px solid #ddd6fe;">
+                        <i class="fa-solid fa-house" style="margin-right: 6px;"></i> HOUSING OPTIONS
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #7c3aed; font-size: 1.1rem;">住居の選択</span>
+                </div>
+
+                <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">
+                    <i class="fa-solid fa-bed" style="color: #bc002d; margin-right: 8px;"></i> Где жить студенту: Сравнение видов жилья
+                </h2>
+                <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin-bottom: 16px;">
+                    Выбор формата проживания зависит от вашего бюджета, желания общаться и готовности к первоначальным взносам.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    <!-- Общежитие -->
+                    <div style="border: 1px solid #e5e7eb; padding: 18px; border-radius: 10px; background: #ffffff;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
+                            <span style="font-weight: 700; color: #111827; font-size: 1rem;">1. Студенческое общежитие</span>
+                            <span style="font-weight: 700; color: #166534; background: #dcfce7; padding: 2px 10px; border-radius: 12px; font-size: 0.82rem;">¥15,000 – ¥100,000 / мес</span>
+                        </div>
+                        <p style="font-size: 0.88rem; color: #4b5563; line-height: 1.5; margin: 0;">
+                            Самый доступный и простой вариант. Мебель и коммунальные услуги уже включены. Зачастую не требует поручителей и крупных залогов.
+                        </p>
+                    </div>
+
+                    <!-- Share House -->
+                    <div style="border: 1px solid #e5e7eb; padding: 18px; border-radius: 10px; background: #ffffff;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
+                            <span style="font-weight: 700; color: #111827; font-size: 1rem;">2. Share House</span>
+                            <span style="font-weight: 700; color: #0284c7; background: #e0f2fe; padding: 2px 10px; border-radius: 12px; font-size: 0.82rem;">¥35,000 – ¥90,000 / мес</span>
+                        </div>
+                        <p style="font-size: 0.88rem; color: #4b5563; line-height: 1.5; margin: 0;">
+                            Собственная отдельная комната, но с общей кухней, гостиной и душевой.
+                        </p>
+                    </div>
+
+                    <!-- Аренда квартиры -->
+                    <div style="border: 1px solid #e5e7eb; padding: 18px; border-radius: 10px; background: #ffffff;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
+                            <span style="font-weight: 700; color: #111827; font-size: 1rem;">3. Съемная квартира</span>
+                            <span style="font-weight: 700; color: #d97706; background: #fef3c7; padding: 2px 10px; border-radius: 12px; font-size: 0.82rem;">¥40,000 – ¥130,000+ / мес</span>
+                        </div>
+                        <p style="font-size: 0.88rem; color: #4b5563; line-height: 1.5; margin: 0;">
+                            При заключении договора требуется гарант, депозиты и «подарочные» деньги хозяину, а также покупка мебели.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Чек-лист процедуры прописки -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-list-check" style="color: #bc002d;"></i> Чек-лист
+                </h2>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: #374151;">
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Нашел(а) районный официоз по адресу жилья</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Заполнил(а) бланки регистрации адреса и получил(а) печать на Zairyu Card</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Оформил(а) национальную медицинскую страховку</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Подал(а) заявление на освобождение от пенсионных взносов</span>
+                    </label>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #e5e7eb; margin-top: 50px; color: #6b7280; font-size: 0.85rem;">
+        <p>© 2026 Инженерно-технологический университет Туркменистана имени Огуз хана</p>
+    </footer>
+
+    <!-- Модальное окно авторизации -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-content">
+            <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">Вход</button>
+                <button class="tab-btn" id="regTab" onclick="switchTab('reg')">Регистрация</button>
+            </div>
+            <form id="authForm" onsubmit="handleAuth(event)">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="student@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-btn" id="authSubmitBtn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+</body>
+</html>

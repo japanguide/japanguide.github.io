@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7. Полезные приложения и сервисы — Japan Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .store-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .store-btn {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #374151;
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            padding: 5px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+        .store-btn:hover {
+            border-color: #bc002d;
+            color: #bc002d;
+            background: #fff5f5;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-mark" style="background-color: #bc002d !important;">日本</span>
+                <span class="logo-text">Japan Guide</span>
+            </a>
+
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru" onclick="setLanguage('ru')">RU</button>
+                    <button class="lang-btn" data-lang="tk" onclick="setLanguage('tk')">TK</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+                </div>
+                <button class="auth-btn" onclick="openAuthModal()" data-ru="Вход" data-tk="Giriş">Вход</button>
+            </div>
+
+            <a href="guide-list.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i> <span data-ru="К списку" data-tk="Bölümlere">К списку</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="container page-content" style="max-width: 820px; padding: 40px 20px;">
+
+        <!-- Заголовок страницы -->
+        <div class="page-title-block" style="margin-bottom: 32px; border-bottom: 1px solid #e5e7eb; padding-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="step-badge" style="background: #f3f4f6; color: #bc002d; font-weight: 700; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;">07 / STEP SEVEN</span>
+            </div>
+            <p style="color: #6b7280; font-size: 0.98rem; margin-top: 8px; line-height: 1.6;" data-ru="Полный список незаменимых мобильных приложений, сервисов навигации, переводчиков и Халяль-карт для комфортной жизни в Японии." data-tk="Ýaponiýada rahat ýaşamak üçin zerur bolan ykjam goşundylaryň, nawigasiýa gulluklarynyň, terjimeçileriň we Halal kartalaryň doly sanawy.">
+                Набор проверенных мобильных приложений (iOS / Android / Web), онлайн-переводчиков и Халяль-сервисов для комфортной жизни и поездок.
+            </p>
+        </div>
+
+        <section style="display: flex; flex-direction: column; gap: 24px;">
+            
+            <!-- Блок 1: Навигация и Транспорт -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 26px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+                    <span style="font-size: 0.72rem; font-weight: 800; color: #2563eb; background: #eff6ff; padding: 4px 10px; border-radius: 6px; border: 1px solid #bfdbfe; letter-spacing: 0.05em;">
+                        <i class="fa-solid fa-compass" style="margin-right: 4px;"></i> NAVIGATION
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #2563eb; font-size: 1.1rem;">交通案内</span>
+                </div>
+
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-map-location-dot" style="color: #bc002d;"></i> Навигация и транспорт
+                </h2>
+
+
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+
+                    <!-- App: Japan Travel by NAVITIME -->
+                    <div style="background: #f9fafb; padding: 14px; border-radius: 10px; border: 1px solid #e5e7eb;">
+                        <div style="font-weight: 700; font-size: 0.95rem; color: #111827;">Japan Travel by NAVITIME</div>
+                        <div style="font-size: 0.85rem; color: #4b5563; margin-top: 4px;">Расчет маршрутов с учетом проездных (JR Pass), поиск Free Wi-Fi и пешие маршруты.</div>
+                        <div class="store-links">
+                            <a href="https://japantravel.navitime.com/en/" target="_blank" class="store-btn"><i class="fa-solid fa-globe"></i> Web</a>
+                            <a href="https://apps.apple.com/app/japan-travel-by-navitime/id686373726" target="_blank" class="store-btn"><i class="fa-brands fa-apple"></i> iOS</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.navitime.inbound.walk" target="_blank" class="store-btn"><i class="fa-brands fa-google-play"></i> Android</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Блок 2: Переводчики и Язык -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 26px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+                    <span style="font-size: 0.72rem; font-weight: 800; color: #bc002d; background: #fff1f2; padding: 4px 10px; border-radius: 6px; border: 1px solid #fecdd3; letter-spacing: 0.05em;">
+                        <i class="fa-solid fa-language" style="margin-right: 4px;"></i> TRANSLATION
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #bc002d; font-size: 1.1rem;">翻訳ツール</span>
+                </div>
+
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-language" style="color: #bc002d;"></i> Переводчики и словари
+                </h2>
+
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    
+                    <!-- DeepL -->
+                    <div style="background: #f9fafb; padding: 12px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.9rem; color: #1f2937; font-weight: 700;">DeepL Translate</span>
+                            <span style="font-size: 0.75rem; background: #e0e7ff; color: #3730a3; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Самый точный контекст</span>
+                        </div>
+                        <div style="font-size: 0.83rem; color: #6b7280; margin-top: 4px;">Незаменим для перевода официальных писем и документов.</div>
+                        <div class="store-links">
+                            <a href="https://www.deepl.com/translator" target="_blank" class="store-btn"><i class="fa-solid fa-globe"></i> Web</a>
+                            <a href="https://apps.apple.com/app/deepl-translate/id1552407475" target="_blank" class="store-btn"><i class="fa-brands fa-apple"></i> iOS</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.deepl.mobiletranslator" target="_blank" class="store-btn"><i class="fa-brands fa-google-play"></i> Android</a>
+                        </div>
+                    </div>
+
+                    <!-- Mazii (Исправленные рабочие ссылки) -->
+                    <div style="background: #f9fafb; padding: 12px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.9rem; color: #1f2937; font-weight: 700;">Mazii Japanese Dictionary</span>
+                            <span style="font-size: 0.75rem; background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Словарь и Кандзи</span>
+                        </div>
+                        <div style="font-size: 0.83rem; color: #6b7280; margin-top: 4px;">Удобный словарь, разбор иероглифов и подготовка к JLPT.</div>
+                        <div class="store-links">
+                            <a href="https://mazii.net" target="_blank" class="store-btn"><i class="fa-solid fa-globe"></i> Web</a>
+                            <a href="https://apps.apple.com/us/app/mazii-japanese-dictionary/id933081417" target="_blank" class="store-btn"><i class="fa-brands fa-apple"></i> iOS</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.mazii.dictionary" target="_blank" class="store-btn"><i class="fa-brands fa-google-play"></i> Android</a>
+                        </div>
+                    </div>
+
+                    <!-- VoiceTra -->
+                    <div style="background: #f9fafb; padding: 12px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.9rem; color: #1f2937; font-weight: 700;">VoiceTra</span>
+                            <span style="font-size: 0.75rem; background: #ecfdf5; color: #065f46; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Голосовой перевод</span>
+                        </div>
+                        <div style="font-size: 0.83rem; color: #6b7280; margin-top: 4px;">Официальное приложение государственного института NICT для распознавания речи в реальном времени.</div>
+                        <div class="store-links">
+                            <a href="https://voicetra.nict.go.jp/en/" target="_blank" class="store-btn"><i class="fa-solid fa-globe"></i> Web</a>
+                            <a href="https://apps.apple.com/us/app/voicetra/id581137577" target="_blank" class="store-btn"><i class="fa-brands fa-apple"></i> iOS</a>
+                            <a href="https://play.google.com/store/apps/details?id=jp.go.nict.voicetra" target="_blank" class="store-btn"><i class="fa-brands fa-google-play"></i> Android</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Блок 3: Halal Services & Food -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 26px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+                    <span style="font-size: 0.72rem; font-weight: 800; color: #047857; background: #ecfdf5; padding: 4px 10px; border-radius: 6px; border: 1px solid #a7f3d0; letter-spacing: 0.05em;">
+                        <i class="fa-solid fa-utensils" style="margin-right: 4px;"></i> HALAL GUIDE
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #047857; font-size: 1.1rem;">ハラール案内</span>
+                </div>
+
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-mosque" style="color: #bc002d;"></i> Халяль сервисы и еда
+                </h2>
+
+
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    
+                    <!-- Halal Navi -->
+                    <div style="background: #f9fafb; padding: 12px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <div style="font-size: 0.9rem; color: #1f2937; font-weight: 700;">Halal Navi</div>
+                        <div style="font-size: 0.83rem; color: #6b7280; margin-top: 2px;">Поиск проверенных Халяль заведений, отзывов пользователей и сканер составных ингредиентов.</div>
+                        <div class="store-links">
+                            <a href="https://www.halal-navi.com/" target="_blank" class="store-btn"><i class="fa-solid fa-globe"></i> Web </a>
+                            <a href="https://apps.apple.com/my/app/halal-gourmet-japan/id1004830156" target="_blank" class="store-btn"><i class="fa-brands fa-apple"></i> iOS</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.halalnavi&hl=ru" target="_blank" class="store-btn"><i class="fa-brands fa-google-play"></i> Android</a>
+                        </div>
+                    </div>
+
+                    <!-- Tokyo Camii Direct Link -->
+                    <div style="background: #f9fafb; padding: 12px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <div style="font-size: 0.9rem; color: #1f2937; font-weight: 700;">Tokyo Camii</div>
+                        <div style="font-size: 0.83rem; color: #6b7280; margin-top: 2px;">Токийская мечеть.</div>
+                        <div class="store-links">
+                            <a href="https://tokyocamii.org" target="_blank" class="store-btn"><i class="fa-solid fa-globe"></i> Web </a>
+                            <a href="https://maps.google.com/?q=Tokyo+Camii" target="_blank" class="store-btn"><i class="fa-solid fa-location-dot"></i> Найти на карте</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Блок 4: Безопасность и Быт -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 26px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+                    <span style="font-size: 0.72rem; font-weight: 800; color: #d97706; background: #fffbe3; padding: 4px 10px; border-radius: 6px; border: 1px solid #fde68a; letter-spacing: 0.05em;">
+                        <i class="fa-solid fa-shield-halved" style="margin-right: 4px;"></i> LIFE & SAFETY
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #d97706; font-size: 1.1rem;">防災と決済</span>
+                </div>
+
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-wallet" style="color: #bc002d;"></i> Безопасность и платежи
+                </h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px;">
+                    
+                    <!-- PayPay -->
+                    <div style="background: #f9fafb; padding: 14px; border-radius: 10px; border: 1px solid #e5e7eb;">
+                        <div style="font-weight: 700; font-size: 0.88rem; color: #bc002d; margin-bottom: 4px;">PayPay</div>
+                        <div style="font-size: 0.82rem; color: #4b5563;">Главный QR-кошелек Японии. Принимается почти во всех комбини и кафе.</div>
+                        <div class="store-links">
+                            <a href="https://play.google.com/store/apps/details?id=jp.ne.paypay.android.app&hl=ru" target="_blank" class="store-btn"><i class="fa-solid fa-globe"></i> Android</a>
+                            <a href="https://apps.apple.com/jp/app/paypay/id1435783608" target="_blank" class="store-btn"><i class="fa-brands fa-apple"></i> iOS</a>
+                        </div>
+                    </div>
+
+                    <!-- Safety Tips -->
+                    <div style="background: #f9fafb; padding: 14px; border-radius: 10px; border: 1px solid #e5e7eb;">
+                        <div style="font-weight: 700; font-size: 0.88rem; color: #bc002d; margin-bottom: 4px;">Safety Tips</div>
+                        <div style="font-size: 0.82rem; color: #4b5563;">Экстренные оповещения о землетрясениях и тайфунах на английском.</div>
+                        <div class="store-links">
+                            <a href="https://apps.apple.com/us/app/safety-tips/id858357174" target="_blank" class="store-btn"><i class="fa-brands fa-apple"></i> iOS</a>
+                            <a href="https://play.google.com/store/apps/details?id=jp.co.rcsc.safetyTips.android" target="_blank" class="store-btn"><i class="fa-brands fa-google-play"></i> Android</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #e5e7eb; margin-top: 50px; color: #6b7280; font-size: 0.85rem;">
+        <p>© 2026 Инженерно-технологический университет Туркменистана имени Огуз хана</p>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-content">
+            <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">Вход</button>
+                <button class="tab-btn" id="regTab" onclick="switchTab('reg')">Регистрация</button>
+            </div>
+            <form id="authForm" onsubmit="handleAuth(event)">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="student@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-btn" id="authSubmitBtn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Прибытие: Аэропорт и Первые шаги — Japan Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+     <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-mark" style="background-color: #bc002d !important;">日本</span>
+                <span class="logo-text">Japan Guide</span>
+            </a>
+
+            <!-- Right Controls: Lang + Auth -->
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru" onclick="setLanguage('ru')">RU</button>
+                    <button class="lang-btn" data-lang="tk" onclick="setLanguage('tk')">TK</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+                </div>
+                <button class="auth-btn" onclick="openAuthModal()" data-ru="Вход" data-tk="Giriş">Вход</button>
+            </div>
+
+            <a href="guide-list.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i> <span data-ru="К списку" data-tk="Bölümlere">К списку</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container page-content" style="max-width: 860px; padding: 40px 20px;">
+
+        <!-- Заголовок страницы -->
+        <div class="page-title-block" style="margin-bottom: 32px; border-bottom: 1px solid #e5e7eb; padding-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                <span class="step-badge" style="background: #f3f4f6; color: #bc002d; font-weight: 700; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;">
+                    02 / STEP TWO
+                </span>
+            </div>
+            <p style="color: #4b5563; font-size: 1rem; margin-top: 10px; line-height: 1.6;">
+                Пошаговое руководство по прохождению иммиграции, оформлению карты резидента Zairyu Card, получению разрешения на подработку, настройке интернета и первому выезду из аэропорта.
+            </p>
+        </div>
+
+        <section style="display: flex; flex-direction: column; gap: 28px;">
+
+            <!-- Подготовка до прилета: Visit Japan Web -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 0.75rem; font-weight: 800; color: #7c3aed; background: #f3e8ff; padding: 4px 12px; border-radius: 6px; border: 1px solid #ddd6fe;">
+                        <i class="fa-solid fa-qrcode" style="margin-right: 6px;"></i> ONLINE PREPARATION
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #7c3aed; font-size: 1.1rem;">事前登録</span>
+                </div>
+
+                <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 10px;">
+                    <i class="fa-solid fa-mobile-screen-button" style="color: #bc002d; margin-right: 8px;"></i> Сервис Visit Japan Web
+                </h2>
+                <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin-bottom: 16px;">
+                    Чтобы не заполнять бумажные бланки иммиграции и таможни вручную в самолете, зарегистрируйтесь на официальном портале за 2–3 дня до вылета.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 16px;">
+                    <div style="background: #f9fafb; padding: 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <span style="font-weight: 700; color: #111827; display: block; font-size: 0.9rem; margin-bottom: 4px;">1. Иммиграционная карта</span>
+                        <span style="font-size: 0.85rem; color: #6b7280;">Генерирует QR-код для паспортного контроля. Внесите адрес вашей школы/отеля.</span>
+                    </div>
+                    <div style="background: #f9fafb; padding: 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <span style="font-weight: 700; color: #111827; display: block; font-size: 0.9rem; margin-bottom: 4px;">2. Таможенная декларация</span>
+                        <span style="font-size: 0.85rem; color: #6b7280;">Генерирует QR-код для зоны багажа. Позволяет пройти через автоматические ворота.</span>
+                    </div>
+                </div>
+
+                <div style="background: #fffbeeb0; border: 1px solid #fef3c7; padding: 12px 16px; border-radius: 8px; font-size: 0.88rem; color: #b45309; display: flex; align-items: flex-start; gap: 10px;">
+                    <i class="fa-solid fa-lightbulb" style="margin-top: 3px; font-size: 1rem;"></i>
+                    <span><strong>Совет:</strong> Сделайте скриншоты обоих QR-кодов заранее! Wi-Fi в зоне прибытия аэропорта может работать медленно из-за большого потока пассажиров.</span>
+                </div>
+            </div>
+
+            <!-- Главный шаг: Карта Резидента и Разрешение на работу -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 0.75rem; font-weight: 800; color: #0284c7; background: #e0f2fe; padding: 4px 12px; border-radius: 6px; border: 1px solid #bae6fd;">
+                        <i class="fa-solid fa-id-card" style="margin-right: 6px;"></i> CRITICAL STEP
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #0284c7; font-size: 1.1rem;">在留カード</span>
+                </div>
+
+                <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">
+                    <i class="fa-solid fa-passport" style="color: #bc002d; margin-right: 8px;"></i> Получение Zairyu Card и Разрешения на подработку
+                </h2>
+                <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin-bottom: 16px;">
+                    В главных аэропортах (Narita, Haneda, Kansai, Chubu) пластиковую карту резидента Zairyu Card печатают и выдают на месте прямо на офицерском стойке.
+                </p>
+
+                <!-- Вложенный выделенный блок про подработку -->
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: 10px; margin-bottom: 18px;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                        <i class="fa-solid fa-briefcase" style="color: #166534; font-size: 1.2rem;"></i>
+                        <h3 style="font-size: 1.05rem; font-weight: 700; color: #166534; margin: 0;">
+                            Разрешение на подработку (Shikakugai Katsu)
+                        </h3>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #14532d; line-height: 1.5; margin-bottom: 12px;">
+                        Если у вас виза категории Student, вы имеете право работать до 28 часов в неделю (и до 40 часов во время официальных каникул).
+                    </p>
+                    <ul style="font-size: 0.88rem; color: #166534; padding-left: 20px; margin: 0; line-height: 1.6;">
+                        <li>Офицер поставит специальный черный штамп на обратную сторону вашей Zairyu Card.</li>
+                        <li><strong>Важно:</strong> Если не сделать это в аэропорту, оформление через Иммиграционное бюро в городе займет от 2 до 4 недель!</li>
+                    </ul>
+                </div>
+
+                <!-- Анализ данных карты -->
+                <div style="background: #f9fafb; border: 1px solid #e5e7eb; padding: 16px; border-radius: 8px;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: #111827; display: block; margin-bottom: 8px;">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #bc002d; margin-right: 4px;"></i> Что проверить на карте не отходя от стойки:
+                    </span>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.85rem; color: #4b5563;">
+                        <div>✓ Имя, фамилия</div>
+                        <div>✓ Дату рождения и пол</div>
+                        <div>✓ Статус пребывания</div>
+                        <div>✓ Наличие штампа о подработке</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Связь и Мобильный интернет -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 0.75rem; font-weight: 800; color: #d97706; background: #fef3c7; padding: 4px 12px; border-radius: 6px; border: 1px solid #fde68a;">
+                        <i class="fa-solid fa-wifi" style="margin-right: 6px;"></i> CONNECTIVITY
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #d97706; font-size: 1.1rem;">通信・SIM</span>
+                </div>
+
+                <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">
+                    <i class="fa-solid fa-sim-card" style="color: #bc002d; margin-right: 8px;"></i> Мобильный интернет и SIM-карты
+                </h2>
+                <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin-bottom: 16px;">
+                    Для навигации и связи вам понадобятся мобильные данные сразу после выхода из зоны досмотра.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+                    <div style="border: 1px solid #e5e7eb; padding: 16px; border-radius: 8px; background: #ffffff;">
+                        <div style="font-weight: 700; color: #111827; font-size: 0.95rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fa-solid fa-bolt" style="color: #eab308;"></i> eSIM (Временный трафик)
+                        </div>
+                        <p style="font-size: 0.85rem; color: #6b7280; line-height: 1.5; margin: 0;">
+Покупайте временную сим-карту в аэропорту или супермаркете. Цены в японских аэропортах практически не отличаются.
+                        </p>
+                    </div>
+
+                    <div style="border: 1px solid #e5e7eb; padding: 16px; border-radius: 8px; background: #ffffff;">
+                        <div style="font-weight: 700; color: #111827; font-size: 0.95rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fa-solid fa-phone-volume" style="color: #2563eb;"></i> Студенческие SIM (Долгосрок)
+                        </div>
+                        <p style="font-size: 0.85rem; color: #6b7280; line-height: 1.5; margin: 0;">
+                            Mobal или GTN Mobile. Главный плюс: не требуют японского банковского счета и выдают полноценный номер +81.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Обмен валюты и Наличные -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 0.75rem; font-weight: 800; color: #166534; background: #dcfce7; padding: 4px 12px; border-radius: 6px; border: 1px solid #bbf7d0;">
+                        <i class="fa-solid fa-money-bill-wave" style="margin-right: 6px;"></i> CURRENCY & CASH
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #166534; font-size: 1.1rem;">現金・両替</span>
+                </div>
+
+                <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">
+                    <i class="fa-solid fa-wallet" style="color: #bc002d; margin-right: 8px;"></i> Наличные деньги на первое время
+                </h2>
+                <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin-bottom: 16px;">
+                    Несмотря на технологичность, Япония остается карманно-наличной страной. Проезд в автобусах, студенческие столовые и автоматы с напитками часто принимают только иены.
+                </p>
+
+                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 16px; border-radius: 8px; font-size: 0.9rem; color: #9d174d; line-height: 1.5;">
+                    <strong>Рекомендуемая сумма:</strong> Держите при себе минимум <strong>¥80,000-¥100,000 наличными</strong> на первые 2 недели. Снять наличные с иностранных карт Visa/Mastercard можно в банкоматах <strong>любого комбини</strong> и <strong>Japan Post</strong> прям в терминале аэропорта.
+                </div>
+            </div>
+
+            <!-- Как добраться из аэропорта в город -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <span style="font-size: 0.75rem; font-weight: 800; color: #2563eb; background: #eff6ff; padding: 4px 12px; border-radius: 6px; border: 1px solid #bfdbfe;">
+                        <i class="fa-solid fa-train-subway" style="margin-right: 6px;"></i> LOGISTICS
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #2563eb; font-size: 1.1rem;">移動・アクセス</span>
+                </div>
+
+                <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">
+                    <i class="fa-solid fa-route" style="color: #bc002d; margin-right: 8px;"></i> Как добраться из аэропорта Нарита / Ханеда
+                </h2>
+                <p style="font-size: 0.95rem; color: #374151; line-height: 1.6; margin-bottom: 16px;">
+                    Выбирайте транспорт в зависимости от количества багажа и конечной станции в Токио:
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <!-- Транспорт 1 -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #f9fafb; padding: 14px 18px; border-radius: 8px; border: 1px solid #e5e7eb; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <span style="font-weight: 700; color: #111827; font-size: 0.95rem; display: block;">Keisei Skyliner (Из Нариты)</span>
+                            <span style="font-size: 0.85rem; color: #6b7280;">Самый быстрый поезд до станций Ueno и Nippori (36 минут).</span>
+                        </div>
+                        <span style="font-weight: 700; color: #bc002d; font-size: 0.9rem;">~ ¥2,570</span>
+                    </div>
+
+                    <!-- Транспорт 2 -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #f9fafb; padding: 14px 18px; border-radius: 8px; border: 1px solid #e5e7eb; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <span style="font-weight: 700; color: #111827; font-size: 0.95rem; display: block;">JR Narita Express N'EX (Из Нариты)</span>
+                            <span style="font-size: 0.85rem; color: #6b7280;">Прямой поезд до станций Tokyo, Shinjuku, Shibuya и Yokohama.</span>
+                        </div>
+                        <span style="font-weight: 700; color: #bc002d; font-size: 0.9rem;">~ ¥3,250</span>
+                    </div>
+
+                    <!-- Транспорт 3 -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #f9fafb; padding: 14px 18px; border-radius: 8px; border: 1px solid #e5e7eb; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <span style="font-weight: 700; color: #111827; font-size: 0.95rem; display: block;">Limousine Bus (Автобус)</span>
+                            <span style="font-size: 0.85rem; color: #6b7280;">Возет напрямую до дверей крупных отелей и станций.</span>
+                        </div>
+                        <span style="font-weight: 700; color: #bc002d; font-size: 0.9rem;">~ ¥1,300 – ¥3,200</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Чек-лист по выходу из аэропорта -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-list-check" style="color: #bc002d;"></i> Чек-лист
+                </h2>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: #374151;">
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Получил(а) Zairyu Card с верными личными данными</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Проверил(а) наличие штампа разрешения на подработку</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Подключил(а) мобильный интернет (eSIM или японскую SIM)</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Снял(а) наличные иены в банкомате</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Купил(а) билет на поезд/автобус или активировал(а) Suica/Pasmo в телефоне</span>
+                    </label>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #e5e7eb; margin-top: 50px; color: #6b7280; font-size: 0.85rem;">
+        <p>© 2026 Инженерно-технологический университет Туркменистана имени Огуз хана</p>
+    </footer>
+
+    <!-- Модальное окно авторизации -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-content">
+            <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">Вход</button>
+                <button class="tab-btn" id="regTab" onclick="switchTab('reg')">Регистрация</button>
+            </div>
+            <form id="authForm" onsubmit="handleAuth(event)">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="student@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-btn" id="authSubmitBtn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+</body>
+</html>

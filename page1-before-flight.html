@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. До вылета: Документы и Виза — Japan Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-mark" style="background-color: #bc002d !important;">日本</span>
+                <span class="logo-text">Japan Guide</span>
+            </a>
+
+            <!-- Right Controls: Lang + Auth -->
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru" onclick="setLanguage('ru')">RU</button>
+                    <button class="lang-btn" data-lang="tk" onclick="setLanguage('tk')">TK</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+                </div>
+                <button class="auth-btn" onclick="openAuthModal()" data-ru="Вход" data-tk="Giriş">Вход</button>
+            </div>
+
+            <a href="guide-list.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i> <span data-ru="К списку" data-tk="Bölümlere">К списку</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="container page-content" style="max-width: 820px; padding: 40px 20px;">
+
+        <!-- Заголовок страницы (Hi-Tech x Traditional Minimal) -->
+        <div class="page-title-block" style="margin-bottom: 32px; border-bottom: 1px solid #e5e7eb; padding-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="step-badge" style="background: #f3f4f6; color: #bc002d; font-weight: 700; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;">01 / STEP ONE</span>
+            </div>
+            <p style="color: #6b7280; font-size: 0.98rem; margin-top: 8px; line-height: 1.6;" data-ru="Полный регламент оформления CoE, подачи визового досье в Посольство Японии в Ашхабаде и сбор таможенного багажа." data-tk="CoE almagyň, Aşgabatdaky Ýaponiýanyň Ilçihanasyna wiza resminamalaryny tabşyrmagyň we goşlary ýygnamagyň doly tertibi.">
+                Полный регламент подачи визового досье в Посольство Японии в Ашхабаде и сбор документов.
+            </p>
+        </div>
+
+        <section style="display: flex; flex-direction: column; gap: 24px;">
+            
+            <!-- Блок 1: CoE & LoA (Smart Protocol) -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 26px; border-radius: 12px; transition: all 0.2s ease;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+                    <span style="font-size: 0.72rem; font-weight: 800; color: #2563eb; background: #eff6ff; padding: 4px 10px; border-radius: 6px; border: 1px solid #bfdbfe; letter-spacing: 0.05em;">
+                        <i class="fa-solid fa-bolt" style="margin-right: 4px;"></i> ELIGIBILITY
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #2563eb; font-size: 1.1rem;">在留資格認定証明書</span>
+                </div>
+
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-file-contract" style="color: #bc002d;"></i> Получение CoE и LoA
+                </h2>
+
+                <p style="font-size: 0.93rem; color: #374151; line-height: 1.65; margin-bottom: 16px;">
+                    Японский университет или языковая школа самостоятельно подает документы в Иммиграционную службу Японии для выпуска сертификата <strong>CoE (Certificate of Eligibility)</strong> и присылает электронную версию вместе с <strong>LoA (Letter of Acceptance)</strong>.
+                </p>
+
+                <!-- Status Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+                    <div style="background: #f9fafb; padding: 12px 16px; border-radius: 8px; border-left: 3px solid #2563eb;">
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #6b7280; text-transform: uppercase;">Срок выпуска CoE</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #111827; margin-top: 2px;">1 – 3 Месяца</div>
+                    </div>
+                    <div style="background: #f9fafb; padding: 12px 16px; border-radius: 8px; border-left: 3px solid #059669;">
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #6b7280; text-transform: uppercase;">Формат CoE</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #111827; margin-top: 2px;">Digital PDF</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок 2: Посольство в Ашхабаде (Детализация + Иконки) -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 26px; border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+                    <span style="font-size: 0.72rem; font-weight: 800; color: #bc002d; background: #fff1f2; padding: 4px 10px; border-radius: 6px; border: 1px solid #fecdd3; letter-spacing: 0.05em;">
+                        <i class="fa-solid fa-location-dot" style="margin-right: 4px;"></i> ASHGABAT EMBASSY
+                    </span>
+                    <span style="font-family: 'Noto Sans JP', sans-serif; font-weight: 700; color: #bc002d; font-size: 1.1rem;">大使館</span>
+                </div>
+
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-building-flag" style="color: #bc002d;"></i> Подача документов в Посольство
+                </h2>
+
+                <p style="font-size: 0.92rem; color: #4b5563; line-height: 1.6; margin-bottom: 16px;">
+                    Подача заявления на визу осуществляется лично в консульском отделе Посольства Японии в г. Ашхабад.
+                </p>
+
+                <h3 style="font-size: 0.95rem; font-weight: 700; color: #111827; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.03em;">
+                    <i class="fa-solid fa-folder-closed" style="color: #bc002d; margin-right: 6px;"></i> Полный пакет документов (Dossier):
+                </h3>
+
+                <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; background: #f9fafb; padding: 10px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <span style="font-size: 0.9rem; color: #1f2937; font-weight: 600;"><i class="fa-regular fa-file-lines" style="color: #bc002d; margin-right: 8px;"></i> Визовая анкета (2 экземпляра)</span>
+                        <span style="font-size: 0.78rem; background: #e5e7eb; color: #374151; padding: 2px 8px; border-radius: 4px; font-weight: 600;">на англ. языке</span>
+                    </div>
+
+                    <div style="display: flex; align-items: center; justify-content: space-between; background: #f9fafb; padding: 10px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <span style="font-size: 0.9rem; color: #1f2937; font-weight: 600;"><i class="fa-regular fa-image" style="color: #bc002d; margin-right: 8px;"></i> Две фотографии 3×4 см</span>
+                        <span style="font-size: 0.78rem; background: #e5e7eb; color: #374151; padding: 2px 8px; border-radius: 4px; font-weight: 600;">белый фон, свежие</span>
+                    </div>
+
+                    <div style="display: flex; align-items: center; justify-content: space-between; background: #f9fafb; padding: 10px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <span style="font-size: 0.9rem; color: #1f2937; font-weight: 600;"><i class="fa-solid fa-passport" style="color: #bc002d; margin-right: 8px;"></i> Заграничный паспорт (Оригинал + копия)</span>
+                        <span style="font-size: 0.78rem; background: #e5e7eb; color: #374151; padding: 2px 8px; border-radius: 4px; font-weight: 600;">срок более 6 мес.</span>
+                    </div>
+
+                    <div style="display: flex; align-items: center; justify-content: space-between; background: #f9fafb; padding: 10px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <span style="font-size: 0.9rem; color: #1f2937; font-weight: 600;"><i class="fa-solid fa-certificate" style="color: #bc002d; margin-right: 8px;"></i> Сертификат CoE & Приглашение LoA</span>
+                        <span style="font-size: 0.78rem; background: #e5e7eb; color: #374151; padding: 2px 8px; border-radius: 4px; font-weight: 600;">оригинал + копия</span>
+                    </div>
+
+                        <div style="display: flex; align-items: center; justify-content: space-between; background: #f9fafb; padding: 10px 14px; border-radius: 8px; border: 1px solid #f3f4f6;">
+                        <span style="font-size: 0.9rem; color: #1f2937; font-weight: 600;"><i class="fa-solid fa-certificate" style="color: #bc002d; margin-right: 8px;"></i> Авиабилеты</span>
+                        <span style="font-size: 0.78rem; background: #e5e7eb; color: #374151; padding: 2px 8px; border-radius: 4px; font-weight: 600;">копия</span>
+                    </div>
+                </div>
+
+                <!-- Alert Notice -->
+                <div style="background: #fffbebf5; border: 1px solid #fef08a; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+                    <i class="fa-solid fa-clock-rotate-left" style="color: #d97706; font-size: 1.2rem;"></i>
+                    <div style="font-size: 0.88rem; color: #92400e; line-height: 1.4;">
+                        <strong>Срок рассмотрения в Ашхабаде:</strong> Стандартный срок составляет от <strong>4 до 7 рабочих дней</strong>.
+                    </div>
+                </div>
+            </div>
+
+ <!-- Чек-лист перед вылетом в Японию -->
+            <div class="app-card" style="background: #ffffff; border: 1px solid #e5e7eb; padding: 28px; border-radius: 12px;">
+                <h2 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-list-check" style="color: #bc002d;"></i> Чек-лист готовности к вылету
+                </h2>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: #374151;">
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Получил(а) оригиналы/копии CoE и LoA от университета или языковой школы</span>
+                    </label>
+
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Подал(а) досье в Посольство Японии в Ашхабаде и получил(а) визу в загранпаспорт</span>
+                    </label>
+
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Распечатал(а) документы для таможни: CoE, LoA, бронь авиабилетов и адрес проживания</span>
+                    </label>
+
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Заполнил(а) форму на сайте Visit Japan Web для быстрого прохождения иммиграции</span>
+                    </label>
+
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Подготовил(а) наличные ($1000–$1500) и купюры мелкого номинала</span>
+                    </label>
+
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Купил(а) переходники на розетки типа A (100V) и упаковал(а) Powerbank в ручную кладь</span>
+                    </label>
+
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #f9fafb; padding: 10px 14px; border-radius: 6px;">
+                        <input type="checkbox" style="accent-color: #bc002d; width: 16px; height: 16px;">
+                        <span>Проверил(а) аптечку (лекарства первой необходимости с рецептом сданы в багаж)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Блок 4: Wabi-Sabi Cultural & Technical Note -->
+            <div style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 18px; border-radius: 12px; display: flex; align-items: flex-start; gap: 14px;">
+                <span style="font-family: 'Noto Sans JP', sans-serif; font-size: 1.8rem; color: #bc002d; font-weight: 700; line-height: 1;">和</span>
+                <div style="font-size: 0.86rem; color: #475569; line-height: 1.55;">
+                    В Японии порядок в документах с первых минут отражает ваше уважение к правилам общества. Подготовьте аккуратную папку-оргнайзер для прохождения таможенного контроля в аэропорту.
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #e5e7eb; margin-top: 50px; color: #6b7280; font-size: 0.85rem;">
+        <p>© 2026 Инженерно-технологический университет Туркменистана имени Огуз хана</p>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-content">
+            <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">Вход</button>
+                <button class="tab-btn" id="regTab" onclick="switchTab('reg')">Регистрация</button>
+            </div>
+            <form id="authForm" onsubmit="handleAuth(event)">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="student@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-btn" id="authSubmitBtn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разделы путеводителя</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-mark" style="background-color: #bc002d !important;">日本</span>
+                <span class="logo-text">Japan Guide</span>
+            </a>
+
+            <!-- Right Controls: Lang + Auth -->
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ru" onclick="setLanguage('ru')">RU</button>
+                    <button class="lang-btn" data-lang="tk" onclick="setLanguage('tk')">TK</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+                </div>
+                <button class="auth-btn" onclick="openAuthModal()" data-ru="Вход" data-tk="Giriş">Вход</button>
+            </div>
+
+            <a href="index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i> <span data-ru="На главную" data-tk="Baş sahypa">На главную</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+
+        <!-- ПОИСКОВАЯ СТРОКА -->
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Поиск по темам (например: виза, банк, мусор)..." onkeyup="filterGuide()">
+        </div>
+
+        <!-- СЕТКА ССЫЛОК -->
+        <div class="nav-grid" id="navGrid">
+
+            <a href="page1-before-flight.html" class="nav-item" data-keywords="документы виза coe посольство ашхабад чемодан вылет">
+                <div class="nav-item-left">
+                    <div class="icon-wrapper">
+                        <img src="1.png" alt="before" class="custom-png-icon">
+                    </div>
+                    <div class="nav-text">
+                        <span class="nav-number">01</span>
+                        <span class="nav-title">До вылета: Документы и Виза</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-long arrow"></i>
+            </a>
+
+            <a href="page2-airport.html" class="nav-item" data-keywords="аэропорт нарита ханэда qr visit japan zairyu card карта резидента подработка граница миграция">
+                <div class="nav-item-left">
+                    <div class="icon-wrapper">
+                        <img src="2.png" alt="airport" class="custom-png-icon">
+                    </div>
+                    <div class="nav-text">
+                        <span class="nav-number">02</span>
+                        <span class="nav-title">В аэропорту: Миграция и первые шаги</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-long arrow"></i>
+            </a>
+
+            <a href="page3-cityhall.html" class="nav-item" data-keywords="сити холл мэрия прописка страховка пенсия nenkin жилье связь сим карта банк post bank ючо gtn mobal konbini">
+                <div class="nav-item-left">
+                    <div class="icon-wrapper">
+                        <img src="3.png" alt="cityhall" class="custom-png-icon">
+                    </div>
+                    <div class="nav-text">
+                        <span class="nav-number">03</span>
+                        <span class="nav-title">По прибытии: Сити-холл, Банк и Связь</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-long arrow"></i>
+            </a>
+
+            <a href="page4-university.html" class="nav-item" data-keywords="университет тьютор tutor студенческий билет gakuseisho bukatsu circle кружки лаборатория этикет">
+                <div class="nav-item-left">
+                    <div class="icon-wrapper">
+                        <img src="4.png" alt="university" class="custom-png-icon">
+                    </div>
+                    <div class="nav-text">
+                        <span class="nav-number">04</span>
+                        <span class="nav-title">В университете: Академические процедуры</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-long arrow"></i>
+            </a>
+
+            <a href="page5-life.html" class="nav-item" data-keywords="общежитие быт мусор сортировка moeru gomi этикет землетрясение скорая полиция 110 119 meiwaku">
+                <div class="nav-item-left">
+                    <div class="icon-wrapper">
+                        <img src="5.png" alt="life" class="custom-png-icon">
+                    </div>
+                    <div class="nav-text">
+                        <span class="nav-number">05</span>
+                        <span class="nav-title">В общежитии, быт и правила</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-long arrow"></i>
+            </a>
+
+ 
+
+<a href="page7-apps.html" class="nav-item">
+    <div class="nav-item-left">
+        <div class="icon-wrapper">
+            <img src="7.png" alt="apps" class="custom-png-icon">
+        </div>
+        <div class="nav-text">
+            <span class="nav-number">07</span>
+            <span class="nav-title" data-ru="Приложения и полезные ссылки" data-tk="Programmalar we peýdaly salgylar">
+                Приложения и полезные ссылки
+            </span>
+        </div>
+    </div>
+    <i class="fa-solid fa-arrow-right-long arrow"></i>
+</a>
+
+        </div>
+        
+        <p id="noResults" style="display: none; text-align: center; margin-top: 30px; color: #888;">
+            Ничего не найдено по вашему запросу 😕
+        </p>
+    </main>
+
+    <footer>
+        <p>© 2026 Инженерно-технологический университет Туркменистана имени Огуз хана</p>
+    </footer>
+
+    <script>
+        function filterGuide() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const items = document.querySelectorAll('.nav-item');
+            let hasResults = false;
+
+            items.forEach(item => {
+                const title = item.innerText.toLowerCase();
+                const keywords = item.getAttribute('data-keywords') || '';
+                
+                if (title.includes(input) || keywords.includes(input)) {
+                    item.style.display = 'flex';
+                    hasResults = true;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            document.getElementById('noResults').style.display = hasResults ? 'none' : 'block';
+        }
+    </script>
+    <script src="translations.js"></script>
+    <!-- Модальное окно авторизации -->
+<div id="authModal" class="auth-modal">
+    <div class="auth-content">
+        <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+        
+        <!-- Переключатель Вход / Регистрация -->
+        <div class="auth-tabs">
+            <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">Вход</button>
+            <button class="tab-btn" id="regTab" onclick="switchTab('reg')">Регистрация</button>
+        </div>
+
+        <form id="authForm" onsubmit="handleAuth(event)">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="student@gmail.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label>Пароль</label>
+                <input type="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="submit-btn" id="authSubmitBtn">Войти</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
