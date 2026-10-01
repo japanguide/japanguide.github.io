@@ -764,3 +764,11 @@ footer p {
     display: none !important;
     content: none !important;
 }
+
+/* Отключаем генерацию иконок без текста под инфоблоком */
+.info-badge ~ i, 
+.info-badge ~ div i,
+.hero-card i:not(.fa-university):not(.fa-arrow-right) {
+    display: none !important;
+}
+
