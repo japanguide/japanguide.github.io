@@ -755,21 +755,34 @@ footer p {
     margin-top: 10px;
 }
 
-/* Жесткая зачистка всех фантомных иконок */
-main i.fa-solid:not(.fa-university):not(.fa-arrow-right),
-main i.fa-regular,
-main i.fa-brands,
-main i.fas:not(.fa-university):not(.fa-arrow-right) {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
+/* Полная блокировка конкретных иконок, которые ломают верстку */
 
-/* На всякий случай гасим все фоновые псевдоэлементы в карточке */
-.hero-card *, .hero-card *::before, .hero-card *::after {
-    --fa-display: none !important;
-}
-.hero-card::before, .hero-card::after {
+/* 1. Блокируем шляпу выпускника */
+.fa-graduation-cap, 
+[class*="fa-graduation"],
+[content*="\f19d"] {
     display: none !important;
     content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* 2. Блокируем мишень */
+.fa-target, 
+.fa-bullseye,
+[content*="\f05b"] {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* 3. Блокируем группу человечков */
+.fa-users, 
+.fa-user-group,
+[content*="\f0c0"] {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
