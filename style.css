@@ -755,20 +755,21 @@ footer p {
     margin-top: 10px;
 }
 
-/* Полное удаление шляпы выпускника и других фантомных значков */
-.gif-container::before,
-.gif-container::after,
-.hero-card::before,
-.hero-card::after,
-.info-badge::after {
+/* Жесткая зачистка всех фантомных иконок */
+main i.fa-solid:not(.fa-university):not(.fa-arrow-right),
+main i.fa-regular,
+main i.fa-brands,
+main i.fas:not(.fa-university):not(.fa-arrow-right) {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* На всякий случай гасим все фоновые псевдоэлементы в карточке */
+.hero-card *, .hero-card *::before, .hero-card *::after {
+    --fa-display: none !important;
+}
+.hero-card::before, .hero-card::after {
     display: none !important;
     content: none !important;
 }
-
-/* Отключаем генерацию иконок без текста под инфоблоком */
-.info-badge ~ i, 
-.info-badge ~ div i,
-.hero-card i:not(.fa-university):not(.fa-arrow-right) {
-    display: none !important;
-}
-
