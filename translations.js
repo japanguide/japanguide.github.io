@@ -300,7 +300,7 @@ const translations = {
         "Konnichiwa! 👋 Я офлайн-гид Sakura Bot. Чем могу помочь? Спросите про карты ТМ, работу, визу, медицинскую страховку, халяль еду или жилье!",
 
         // page 7
-        "07 / STEP SEVEN": "07 / STEP SEVEN",
+        "06 / STEP SIX": "06 / STEP SIX",
         "NAVIGATION":"NAVIGATION",
         "TRANSLATION":"TRANSLATION",
         "HALAL GUIDE":"HALAL GUIDE",
@@ -647,7 +647,7 @@ const translations = {
         "Финансы и карточки Внешэкономбанка Туркменистана в Японии:":"Ýaponiýada Türkmenistanyň Daşary ykdysady bankynyň kartlary we maliýe:",
        
        // page 7
-       "07 / STEP SEVEN": "07 / ÝEDINJI ÄDIM",
+       "06 / STEP SEVEN": "06 / ALTYNJY ÄDIM",
         "NAVIGATION":"NAWIGASIÝA",
         "TRANSLATION":"TERJIME",
         "HALAL GUIDE":"HALAL TÖWEREK",
@@ -986,7 +986,7 @@ const translations = {
         "Konnichiwa! 👋 I am Sakura Bot, your offline guide. How can I help? Ask me about TM bank cards, part-time jobs, visas, health insurance, halal food, or housing!",
 
         // page 7
-        "07 / STEP SEVEN": "07 / STEP SEVEN",
+        "06 / STEP SIX": "06 / STEP SIX",
         "NAVIGATION": "NAVIGATION",
         "TRANSLATION": "TRANSLATION",
         "HALAL GUIDE": "HALAL GUIDE",
