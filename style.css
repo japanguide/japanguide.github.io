@@ -787,22 +787,66 @@ footer p {
     opacity: 0 !important;
 }
 
+/* --- Адаптация шапки для мобильных экранов (до 480px) --- */
 @media (max-width: 480px) {
-    /* 1. Уменьшаем размер логотипа */
-    .brand-name { /* укажите ваш класс */
-        font-size: 16px; 
-    }
     
-    /* 2. Уменьшаем кнопки переключения языков */
-    .language-switcher button { /* укажите ваш класс */
-        padding: 4px 8px;
-        font-size: 12px;
+    /* 1. Делаем контейнер шапки компактным и запрещаем ломать строку */
+    .header-flex {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 8px 10px !important; /* Уменьшаем отступы вокруг шапки */
+        gap: 8px !important;
     }
 
-    /* 3. Уменьшаем кнопки "Вход" и "К списку" */
-    .login-btn, .back-btn { /* укажите ваши классы */
-        padding: 6px 12px;
-        font-size: 13px;
+    /* 2. Уменьшаем логотип */
+    .brand-logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+        text-decoration: none !important;
+    }
+
+    /* Красный квадрат "日本" */
+    .logo-mark {
+        padding: 3px 6px !important; /* Делаем плашку меньше */
+        font-size: 11px !important;   /* Уменьшаем иероглифы */
+        border-radius: 4px !important;
+    }
+
+    /* Текст "Japan Guide" */
+    .logo-text {
+        font-size: 14px !important;   /* Уменьшаем размер букв */
+        font-weight: 700 !important;
+    }
+
+    /* 3. Контейнер для кнопок справа */
+    .header-right-controls {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important; /* Сближаем кнопки перевода и Вход/Выход */
+    }
+
+    /* 4. Кнопки переключения языков (RU, TK, EN) */
+    .lang-switcher {
+        display: flex !important;
+        gap: 2px !important;
+    }
+
+    .lang-btn {
+        padding: 4px 6px !important;  /* Сжимаем кнопки, чтобы не были гигантскими */
+        font-size: 10px !important;   /* Делаем шрифт компактным */
+        min-width: auto !important;   /* Убираем фиксированную ширину, если она была */
+        line-height: 1 !important;
+    }
+
+    /* 5. Кнопка "Вход" / "Выход" */
+    .auth-btn, .logout-btn, .back-btn { 
+        padding: 6px 10px !important; /* Уменьшаем внутренние подушки кнопки */
+        font-size: 11px !important;   /* Уменьшаем текст внутри */
+        font-weight: 600 !important;
+        white-space: nowrap !important; /* Запрещаем тексту переноситься */
     }
 }
 
