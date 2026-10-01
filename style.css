@@ -786,3 +786,23 @@ footer p {
     visibility: hidden !important;
     opacity: 0 !important;
 }
+
+@media (max-width: 480px) {
+    /* 1. Уменьшаем размер логотипа */
+    .brand-name { /* укажите ваш класс */
+        font-size: 16px; 
+    }
+    
+    /* 2. Уменьшаем кнопки переключения языков */
+    .language-switcher button { /* укажите ваш класс */
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    /* 3. Уменьшаем кнопки "Вход" и "К списку" */
+    .login-btn, .back-btn { /* укажите ваши классы */
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
