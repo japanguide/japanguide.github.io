@@ -754,3 +754,13 @@ footer p {
     cursor: pointer;
     margin-top: 10px;
 }
+
+/* Полное удаление шляпы выпускника и других фантомных значков */
+.gif-container::before,
+.gif-container::after,
+.hero-card::before,
+.hero-card::after,
+.info-badge::after {
+    display: none !important;
+    content: none !important;
+}
